@@ -13,7 +13,7 @@ public class Lox {
 
     public static void main(String[] args) throws IOException {
         if (args.length>1){
-            System.out.printIn("Usage: jlox [script]");
+            System.out.println("Usage: jlox [script]");
             System.exit(64);
         } else if (args.length==1){
             runFile(args[0]);
@@ -47,7 +47,7 @@ public class Lox {
 
         // For now, just print the tokens.
         for (Token token: tokens){
-            System.out.printIn(token);
+            System.out.println(token);
         }
     }
 
@@ -56,7 +56,7 @@ public class Lox {
     }
 
     private static void report(int line, String where, String message){
-        System.err.printIn("[line "+ line + "] Error"+ where+ ":"+ message);
+        System.err.println("[line "+ line + "] Error"+ where+ ":"+ message);
         hadError = true;
     }
 }
